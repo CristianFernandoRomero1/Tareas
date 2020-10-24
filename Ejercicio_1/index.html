@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+
+  <form class="form-horizontal">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-highlight">
+            <thead>
+                <th>Programacion Parcial</th>
+                <th></th>
+                <th>Programacion Quiz</th>
+                <th></th>
+                <th>Programacion Trabajo</th>
+                <th></th>
+                <th>Total</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" class="form-control" input v-model='programacionParcialUno' placeholder="Nota 1"/></td>
+                    <td><input type="number" class="form-control" input v-model='programacionParcialDos' placeholder="Nota 2"/></td>
+                    <td><input type="number" class="form-control" input v-model='programacionQuizUno' placeholder="Nota 1"/></td>
+                    <td><input type="number" class="form-control" input v-model='programacionQuizDos' placeholder="Nota 2"/></td>
+                    <td><input type="number" class="form-control" input v-model='programacionTrabajoUno' placeholder="Nota 1"/></td>
+                    <td><input type="number" class="form-control" input v-model='programacionTrabajoDos' placeholder="Nota 2"/></td>
+                    <td v-text="pProgramacion"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+
+<form class="form-horizontal">
+  <div class="table-responsive">
+      <table class="table table-bordered table-striped table-highlight">
+          <thead>
+              <th>Cálculo Parcial</th>
+              <th></th>
+              <th>Cálculo Quiz</th>
+              <th></th>
+              <th>Total</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="number" class="form-control" input v-model='calculoParcialUno' placeholder="Nota 1"/></td>
+                  <td><input type="number" class="form-control" input v-model='calculoParcialDos' placeholder="Nota 2"/></td>
+                  <td><input type="number" class="form-control" input v-model='calculoQuizUno' placeholder="Nota 1"/></td>
+                  <td><input type="number" class="form-control" input v-model='calculoQuizDos' placeholder="Nota 2"/></td>
+                  <td v-text="pCalculo"></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</form>
+
+<form class="form-horizontal">
+  <div class="table-responsive">
+      <table class="table table-bordered table-striped table-highlight">
+          <thead>
+              <th>Química Parcial</th>
+              <th>Química Quiz</th>
+              <th>Química Trabajo</th>
+              <th>Total</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="number" class="form-control" input v-model='quimicaParcial' placeholder="Nota"/></td>
+                  <td><input type="number" class="form-control" input v-model='quimicaQuiz' placeholder="Nota"/></td>
+                  <td><input type="number" class="form-control" input v-model='quimicaTrabajo' placeholder="Nota"/></td>
+                  <td v-text="pQuimica"></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</form>
+
+<form class="form-horizontal">
+  <div class="table-responsive">
+      <table class="table table-bordered table-striped table-highlight">
+          <thead>
+              <th>Nota Proyecto</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><input type="text" class="form-control" input v-model='notaProyecto' placeholder="Nota"/></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</form>
+
+  <button type="button" v-on:click="operacion" class="btn btn-primary">Calcular</button>
+      
+  <ul class="list-group">
+    <li class="list-group-item-active list-group-item-success">Promedio semestre {{p}}</li>
+  </ul>
+
+ </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+    <li class="list-group-item active">Monitoreo de pagos</li>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+       seleccionar
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" onclick="return subBoton1()">Semana 1</a>
+        <a class="dropdown-item" href="#" onclick="return subBoton2()">Semana 2</a>
+        <a class="dropdown-item" href="#" onclick="return subBoton3()">Semana 3</a>
+        <a class="dropdown-item" href="#" onclick="return subBoton4()">Semana 4</a>
+      </div>
+    </div>
+
+  <form class="form-horizontal">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-highlight">
+            <thead>
+                <th>Día 1</th>
+                <th>Día 2</th>
+                <th>Día 3</th>
+                <th>Día 4</th>
+                <th>Día 5</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas normales"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas normales"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas normales"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas normales"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas normales"/></td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas extras"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas extras"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas extras"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas extras"/></td>
+                    <td><input type="number" class="form-control" input v-model='dia[semanaSeleccionada]' placeholder="Horas extras"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+
+ 
+<div class="d-none">Esta clase lo oculta para todo</div>
+
+  <button type="button" class="btn btn-primary" v-on:click="operacion">Calcular</button>
+      
+  <ul class="list-group">
+    <li class="list-group-item active">Sueldo a pagar {{p}}</li>
+  </ul>
+
+ </div>
+
+
+    <script src="js/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+  </body>
+</html>
